@@ -64,12 +64,12 @@
                                 <input type="number" name="number" id="number" class="form-control"
                                     placeholder="enter your Nunber"><br>
                                     <label for="Gender">Gender:</label><br>
-                                        Male<input type="radio"  id="Gender" value="M">
-                                        Female<input type="radio"  id="Gender" value="f">
-                                        Other<input type="radio"  id="Gender" value="o"><br>
+                                        Male<input type="radio"  id="Gender1" value="M">
+                                        Female<input type="radio"  id="Gender2" value="f">
+                                        Other<input type="radio"  id="Gender3" value="o"><br>
                                     </select><br>
                                 <label for=password>Password:</label>
-                                <input type="password" name="password" id="password1" class="form-control"
+                                <input type="password" name="password1" id="password1" class="form-control"
                                     placeholder="enter your password"><br>
                                 <label for=password>Confirm Password:</label>
                                 <input type="password" name="cpassword" id="cpassword" class="form-control"
@@ -105,9 +105,9 @@
     }
     function sendlogin()
     {
-        var email = document.getElementByID('email').value;
-        var password = document.getElementByID('password').value;
-        var token = "<?php echo password_hash("logintoken",PASSWORD_DEFAULT);?>"
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var token = "<?php echo password_hash("logintoken",PASSWORD_DEFAULT);?>";
         if(email!="" && password!="")
         {
             $.ajax(
